@@ -159,7 +159,7 @@ io.sockets.on('connection', function( socket ) {
 				}
 				if( !nameExists ) {
 					// Creating the player object
-					players[socket.id] = new Player( socket, newScreenName, 1000 );
+					players[socket.id] = new Player( socket, newScreenName, 2000 );
 					callback( { 'success': true, screenName: newScreenName, totalChips: players[socket.id].chips } );
 				} else {
 					callback( { 'success': false, 'message': 'This name is taken' } );
